@@ -94,7 +94,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ github.workspace }}/build/dokka/htmlMultiModule
+          path: ${{ github.workspace }}/kmpdevicepreview/build/dokka/html
 
       - name: Release to GitHub Pages
         id: deployment
