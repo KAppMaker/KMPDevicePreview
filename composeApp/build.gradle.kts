@@ -56,7 +56,7 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(project(":devicepreview"))
+            implementation(project(":kmpdevicepreview"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)

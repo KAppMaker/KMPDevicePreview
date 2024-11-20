@@ -1,0 +1,124 @@
+public abstract interface class com/kappmaker/devicepreview/core/Device {
+	public abstract fun getName ()Ljava/lang/String;
+	public abstract fun getScreenSize ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public abstract fun getType ()Lcom/kappmaker/devicepreview/core/DeviceType;
+}
+
+public final class com/kappmaker/devicepreview/core/DeviceConfiguration {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (ZZZ)V
+	public synthetic fun <init> (ZZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun copy (ZZZ)Lcom/kappmaker/devicepreview/core/DeviceConfiguration;
+	public static synthetic fun copy$default (Lcom/kappmaker/devicepreview/core/DeviceConfiguration;ZZZILjava/lang/Object;)Lcom/kappmaker/devicepreview/core/DeviceConfiguration;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public final fun isDarkMode ()Z
+	public final fun isPortrait ()Z
+	public final fun isPreviewModeEnabled ()Z
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/kappmaker/devicepreview/core/DeviceType : java/lang/Enum {
+	public static final field ANDROID Lcom/kappmaker/devicepreview/core/DeviceType;
+	public static final field IOS Lcom/kappmaker/devicepreview/core/DeviceType;
+	public static final field OTHER Lcom/kappmaker/devicepreview/core/DeviceType;
+	public final fun getDisplayName ()Ljava/lang/String;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public fun toString ()Ljava/lang/String;
+	public static fun valueOf (Ljava/lang/String;)Lcom/kappmaker/devicepreview/core/DeviceType;
+	public static fun values ()[Lcom/kappmaker/devicepreview/core/DeviceType;
+}
+
+public final class com/kappmaker/devicepreview/core/ScreenSize {
+	public static final field $stable I
+	public fun <init> (FFF)V
+	public final fun component1 ()F
+	public final fun component2 ()F
+	public final fun component3 ()F
+	public final fun copy (FFF)Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public static synthetic fun copy$default (Lcom/kappmaker/devicepreview/core/ScreenSize;FFFILjava/lang/Object;)Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDensity ()F
+	public final fun getHeight ()F
+	public final fun getWidth ()F
+	public fun hashCode ()I
+	public final fun rotated ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/kappmaker/devicepreview/core/SimulatedDevice {
+	public static final field $stable I
+	public fun <init> (Lcom/kappmaker/devicepreview/core/Device;Lcom/kappmaker/devicepreview/core/DeviceConfiguration;)V
+	public synthetic fun <init> (Lcom/kappmaker/devicepreview/core/Device;Lcom/kappmaker/devicepreview/core/DeviceConfiguration;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/kappmaker/devicepreview/core/Device;
+	public final fun component2 ()Lcom/kappmaker/devicepreview/core/DeviceConfiguration;
+	public final fun copy (Lcom/kappmaker/devicepreview/core/Device;Lcom/kappmaker/devicepreview/core/DeviceConfiguration;)Lcom/kappmaker/devicepreview/core/SimulatedDevice;
+	public static synthetic fun copy$default (Lcom/kappmaker/devicepreview/core/SimulatedDevice;Lcom/kappmaker/devicepreview/core/Device;Lcom/kappmaker/devicepreview/core/DeviceConfiguration;ILjava/lang/Object;)Lcom/kappmaker/devicepreview/core/SimulatedDevice;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConfiguration ()Lcom/kappmaker/devicepreview/core/DeviceConfiguration;
+	public final fun getCurrentScreenSize ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public final fun getDevice ()Lcom/kappmaker/devicepreview/core/Device;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/kappmaker/devicepreview/devices/android/Pixel6 : com/kappmaker/devicepreview/core/Device {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun getName ()Ljava/lang/String;
+	public fun getScreenSize ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public fun getType ()Lcom/kappmaker/devicepreview/core/DeviceType;
+}
+
+public final class com/kappmaker/devicepreview/devices/ios/IPhone15Pro : com/kappmaker/devicepreview/core/Device {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun getName ()Ljava/lang/String;
+	public fun getScreenSize ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public fun getType ()Lcom/kappmaker/devicepreview/core/DeviceType;
+}
+
+public final class com/kappmaker/devicepreview/devices/other/GenericDevice : com/kappmaker/devicepreview/core/Device {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun getName ()Ljava/lang/String;
+	public fun getScreenSize ()Lcom/kappmaker/devicepreview/core/ScreenSize;
+	public fun getType ()Lcom/kappmaker/devicepreview/core/DeviceType;
+}
+
+public final class com/kappmaker/devicepreview/preview/ComposableSingletons$ConfigurationViewKt {
+	public static final field INSTANCE Lcom/kappmaker/devicepreview/preview/ComposableSingletons$ConfigurationViewKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$kmpdevicepreview ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class com/kappmaker/devicepreview/preview/ComposableSingletons$DeviceWithConfigurationViewKt {
+	public static final field INSTANCE Lcom/kappmaker/devicepreview/preview/ComposableSingletons$DeviceWithConfigurationViewKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public static field lambda-2 Lkotlin/jvm/functions/Function3;
+	public fun <init> ()V
+	public final fun getLambda-1$kmpdevicepreview ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda-2$kmpdevicepreview ()Lkotlin/jvm/functions/Function3;
+}
+
+public final class com/kappmaker/devicepreview/preview/ConfigurationViewKt {
+	public static final fun ConfigurationView (Landroidx/compose/ui/Modifier;Lcom/kappmaker/devicepreview/core/SimulatedDevice;Lkotlin/jvm/functions/Function1;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/kappmaker/devicepreview/preview/DeviceWithConfigurationViewKt {
+	public static final fun DeviceWithConfigurationView (Landroidx/compose/ui/Modifier;Landroidx/compose/material3/windowsizeclass/WindowSizeClass;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun DeviceWithConfigurationView (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun DeviceWithConfigurationViewCompact (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun DeviceWithConfigurationViewExpanded (Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class com/kappmaker/devicepreview/preview/SimulatedDevicePreviewKt {
+	public static final fun SimulatedDevicePreview (Lcom/kappmaker/devicepreview/core/SimulatedDevice;Landroidx/compose/ui/Modifier;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun getSimulatedDeviceThemeIsDark ()Landroidx/compose/runtime/ProvidableCompositionLocal;
+}
+

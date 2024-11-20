@@ -1,3 +1,4 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
@@ -7,6 +8,8 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+
+    id("com.vanniktech.maven.publish") version "0.28.0"
 }
 kotlin {
     explicitApi()
@@ -62,4 +65,38 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+}
+
+mavenPublishing {
+
+    coordinates("com.kappmaker", "kmpdevicepreview", project.properties["devicePreviewVersion"] as String)
+    pom {
+        name = "KMPDevicePreview"
+        description = "Kotlin & Compose Multiplatform library to simulate any device from any platform, supporting Android, iOS, JVM, JS, and WebAssembly."
+        inceptionYear = "2024"
+        url = "https://github.com/KAppMaker/KMPDevicePreview/"
+        licenses {
+            license {
+                name.set("MIT")
+                url.set("https://opensource.org/licenses/MIT")
+            }
+        }
+        developers {
+            developer {
+                name.set("Mirzamehdi Karimov")
+                email.set("mirzemehdi@gmail.com")
+            }
+        }
+        scm {
+            connection.set("https://github.com/KAppMaker/KMPDevicePreview.git")
+            url.set("https://github.com/KAppMaker/KMPDevicePreview")
+        }
+        issueManagement {
+            system.set("Github")
+            url.set("https://github.com/KAppMaker/KMPDevicePreview/issues")
+        }
+    }
+
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
 }
