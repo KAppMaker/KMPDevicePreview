@@ -14,6 +14,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -65,7 +66,15 @@ public fun SimulatedDevicePreview(
                 containerHeightPx / deviceScreenHeight
             )
 
-            val scaledDensity = deviceDensity * scaleFactor
+
+            val scaledDensity by remember(deviceDensity, scaleFactor) {
+                mutableStateOf(
+                    Density(
+                        density = deviceDensity * scaleFactor,
+                        fontScale = 1f
+                    )
+                )
+            }
 
 
             val shape = RoundedCornerShape(8.dp)
@@ -81,7 +90,7 @@ public fun SimulatedDevicePreview(
 
             ) {
                 CompositionLocalProvider(
-                    LocalDensity provides Density(density = scaledDensity, fontScale = 1f)
+                    LocalDensity provides scaledDensity
                 ) {
                     Box(Modifier.fillMaxSize()) {
                         content()
