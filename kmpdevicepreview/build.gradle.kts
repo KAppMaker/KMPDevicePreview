@@ -8,8 +8,9 @@ plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.dokka)
+    alias(libs.plugins.mavenPublish)
 
-    id("com.vanniktech.maven.publish") version "0.28.0"
 }
 kotlin {
     explicitApi()
