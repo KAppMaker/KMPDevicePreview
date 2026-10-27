@@ -1,5 +1,13 @@
 # KMPDevicePreview - Kotlin & Compose Multiplatform Preview Library
 
+> **Maintenance Notice**
+>
+> This repository is no longer actively maintained. [Apadmi Engineering](https://github.com/Apadmi-Engineering) has forked KMPDevicePreview and is actively maintaining and improving it as [CMPDevicePreview](https://github.com/Apadmi-Engineering/CMPDevicePreview).
+>
+> For the latest updates, bug fixes, new features, and documentation, please visit the **[CMPDevicePreview repository](https://github.com/Apadmi-Engineering/CMPDevicePreview)**.
+
+---
+
 KMPDevicePreview is a Compose Multiplatform library for previewing and simulating your app. It lets you test your app or any part of it on different screen sizes, devices, and settings like dark mode or portrait/landscape orientation. This library works on Android, iOS, Web (WASM/Kotlin), JS and  Desktop (JVM). You can even use it to create web-based demos to showcase your app online.
 
 [![Android Weekly badge](https://androidweekly.net/issues/issue-650/badge)](https://androidweekly.net/issues/issue-650)
